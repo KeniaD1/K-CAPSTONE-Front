@@ -1,9 +1,11 @@
 import React from 'react';
+import MessageIndex from '../Components/MessageIndex/MessageIndex';
 
 const Messages = () => {
     return (
         <div>
-            messages
+          <MessageIndex/>
+
         </div>
     );
 };
