@@ -1,6 +1,7 @@
 
 
 import './App.css'
+import Navbar from './Components/NavBar/NavBar'
 
 import RouteComponent from './Components/routes/RouteComponent'
 
@@ -9,7 +10,8 @@ function App() {
 
   return (
     <>
-      <h1> Hello capstone </h1>
+    <Navbar />
+    
       <RouteComponent/>
     </>
   )
