@@ -1,9 +1,10 @@
 import React from 'react';
+import MessageShow from '../Components/MessageShow/MessageShow';
 
 const Show = () => {
     return (
         <div>
-            show
+          <MessageShow />
         </div>
     );
 };
