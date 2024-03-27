@@ -1,0 +1,27 @@
+.message-index {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.message-index {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+
+}
+
+.message-index h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.message-index p {
+    margin: 10px 0;
+    text-decoration: none;
+}
+Link {
+    text-decoration: none;
+}

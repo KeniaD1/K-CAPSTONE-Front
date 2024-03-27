@@ -1,0 +1,41 @@
+.message-form {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.message-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.message-form input[type="text"],
+.message-form textarea {
+    width: calc(100% - 20px); /* Adjust the width to make it smaller */
+}
+
+
+.message-form input,
+.message-form textarea,
+.message-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.message-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.message-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}

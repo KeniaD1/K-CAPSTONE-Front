@@ -1,10 +1,9 @@
 import React from 'react';
+import CreateMessage from '../Components/CreateMesssage/CreateMessage';
 
 const Edit = () => {
     return (
-        <div>
-            edit 
-        </div>
+        <CreateMessage />
     );
 };
 

@@ -1,10 +1,9 @@
 import React from 'react';
+import CreateMessage from '../Components/CreateMesssage/CreateMessage';
 
 const New = () => {
     return (
-        <div>
-            new
-        </div>
+       <CreateMessage />
     );
 };
 

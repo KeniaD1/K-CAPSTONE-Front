@@ -1,6 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from "axios"
+import './MessageIndex.css'
 
 
 
@@ -30,22 +32,27 @@ const MessageIndex = () => {
 
 
     return (
-
+<>
 
         <div className='message-index'>
             {
-                allMessages.map(mObj => (
-                    <>
-                    <h2> {mObj.name}</h2>
-                    <p>{mObj.post_date}</p>
-                    <p>{mObj.post_time}</p>
-                    <p>{mObj.posted_message}</p>
-                    </>
-                    //new Date()
-                ))
+                allMessages.map(mObj =>
+                    <Link to={`/messages/${mObj.id}`} className='list'>
+
+                        <h2> {mObj.name}</h2>
+                        
+                      
+                        <p>{mObj.post_date}</p>
+                        <p>{mObj.post_time}</p>
+                        <p>{mObj.posted_message}</p>
+                   
+                        </Link>
+
+                )
             }
 
         </div>
+        </>
     );
 };
 
