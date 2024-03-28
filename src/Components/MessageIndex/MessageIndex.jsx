@@ -37,7 +37,7 @@ const MessageIndex = () => {
         <div className='message-index'>
             {
                 allMessages.map(mObj =>
-                    <Link to={`/messages/${mObj.id}`} className='list'>
+                    <Link to={`/messages/${mObj.id}`} className='message'>
 
                         <h2> {mObj.name}</h2>
                         

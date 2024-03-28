@@ -1,27 +1,72 @@
-.message-index {
+/* .message-index {
     width: 80%;
     margin: auto;
     padding: 20px;
+    
 }
 
+.message-index .message{
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 20px;
+    
+
+}
+
+.message-index .message h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: black;
+    text-decoration: underline;
+}
+
+.message-index .message p {
+    margin: 10px ;
+    text-decoration: none;
+    color: black;
+}
+
+.message-index .message {
+    border-right: 1px solid #ccc; /* Add right border */
+/* } */
+/* .message-index .message:last-child {
+    border-right: none; /* Remove right border from last column */
+/* } */
+
+/* a {
+    text-decoration: none;
+    color: black; */
+/* } */ 
+
 .message-index {
+    display: grid;
+    /* flex-wrap: wrap; */
+    column-count: 1;
+     /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); Adjust column width as needed */
+    gap: 20px; /* Adjust gap between columns and rows as needed */
+     /* Set the number of columns */
+    column-gap: 20px; /* Adjust the gap between columns */
+}
+
+
+.message {
+    flex: 1 0 300px;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
+    text-decoration: none;
+    color: black;
     margin-bottom: 20px;
-
 }
 
-.message-index h2 {
+.message h2 {
     font-size: 18px;
     margin-bottom: 5px;
 }
 
-.message-index p {
-    margin: 10px 0;
-    text-decoration: none;
-}
-Link {
-    text-decoration: none;
+.message p {
+    margin: 5px 0;
 }

@@ -57,6 +57,7 @@ const CreateMessage = () => {
 
     function handleEdit(event) {
         event.preventDefault()
+        console.log(newMessage, id)
         axios.put(`${API}/messages/${id}`,
             newMessage
         )
