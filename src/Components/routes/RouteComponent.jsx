@@ -4,6 +4,7 @@ import Messages from "../../Pages/Messages";
 import New from "../../Pages/New";
 import Show from "../../Pages/Show";
 import Edit from "../../Pages/Edit";
+import About from "../../Pages/About";
 
 
 import React from 'react';
@@ -13,6 +14,8 @@ const RouteComponent = () => {
     return (
         <Routes>
              <Route path='/' element= {< Home />} />
+
+             <Route path='/about' element= {<About />} />
 
              <Route path='/messages' element={<Messages />} />
 

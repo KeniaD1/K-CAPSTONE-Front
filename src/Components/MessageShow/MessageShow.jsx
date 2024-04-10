@@ -40,20 +40,21 @@ const MessageShow = () => {
             <div className='messageShow'>
 
                 <h1> {messageInfo.name}</h1>
+                <span>{messageInfo.class}</span>
 
 
-                <p>{messageInfo.post_date}</p>
-                <p>{messageInfo.post_time}</p>
+                <p className='date-show'>{messageInfo.post_date}</p>
+                <p className='time-show'>Sent : {messageInfo.post_time}</p>
                 <p>{messageInfo.posted_message}</p>
 
             </div>
 
             <aside className='messageShow-button'>
-                <Link to={`/messages/${id}/edit`}>
+                <Link to={`/messages/${id}/edit`} className='button edit-button'>
                     EDIT
                 </Link>
-                <button onClick={confirmDelete}>
-                   🗑️
+                <button onClick={confirmDelete} className='button delete-button'>
+                    🗑️
                 </button >
             </aside>
         </div>

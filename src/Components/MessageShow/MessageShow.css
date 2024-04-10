@@ -2,62 +2,134 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    
+    /* height: 100%; */
+    /* position: relative; */
+    flex-direction: column;
+    margin-top: 50px;
+
+}
+
+.date-show {
+
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 165px
+}
+
+.time-show {
+    align-items: flex-end;
+    position: absolute;
+    bottom: 15px;
+    color: gray;
+    left: 165px
 }
 
 .messageShow {
     background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 50px;
+    border: 1px solid#5871cc;
+    border-radius: 8px;
     padding: 100px;
-    align-items: center;
-   
-    margin-right: 10px; /* Add some spacing between the message display and buttons */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* margin-right: 10px; 
+   Add some spacing between the message display and buttons */
 }
 
 .messageShow h1 {
     font-size: 24px;
     margin-bottom: 15px;
     padding: 5px;
-    text-decoration: underline;
+    text-decoration: underline solid gray;
+    color: black;
 }
 
+.messageShow span {
+    font-size: 18px;
+   
+}
+
+.date-show{
+    margin-top: 20px;
+}
+
+.time-show {
+    margin-top: 10px;
+}
 .messageShow p {
-    margin-bottom: 25px;
+    margin-top: 20px;
+    color: #5871cc;
+
 }
 
 .messageShow-button {
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
-.messageShow-buttonn a,
-.messageShow-button button {
-    margin-bottom: 10px;
-}
+  .edit-button {
+    background-color: #007bff;
+    color: #fff;
+    /* margin-right: 10px; */
+  }
 
-.messageShow-button a {
+  .delete-button {
+    background-color: black;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+  }
+/* .messageShow-button a {
     text-decoration: none;
     display: flex;
     flex-direction: column;
     padding: 8px 16px;
     border-radius: 5px;
     color: black;
-    border: solid #007bff;
+    border: solid coral;
     margin: 5px;
-}
+} */
 
-.messageShow-button button {
+/* .messageShow-button button {
     background-color: black;
     /* color: #fff; */
-    border: none;
+/* border: none;
     padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 5px;
-}
+    margin: 5px; */
 
-.messageShow-button button:hover {
+
+ /* .messageShow-button button:hover {
     background-color: #0056b3;
 }
+
+span {
+    color: #5871cc; */
+
+
+/* .date-show{
+    align-items: flex-end;
+   position: absolute;
+   bottom: 0;
+   color: gray;
+
+  
+}
+
+.time-show{
+    align-items: flex-end;
+    position: absolute;
+    bottom: 15px;
+    color: gray;
+} */

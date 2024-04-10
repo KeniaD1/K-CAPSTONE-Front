@@ -75,10 +75,13 @@ const CreateMessage = () => {
     }, [])
 
     return (
+        
         <form className='message-form' onSubmit={(event) => {
             id ? handleEdit(event)
                 : handleSubmit(event)
         }}>
+        <h2>POST MESSAGE</h2>
+
             {/* name */}
             <label htmlFor='name'>
                 Parent/Guardian Name :
@@ -87,15 +90,18 @@ const CreateMessage = () => {
             </label>
 
             {/* Class dropdown */}
-
+<label>
+    Select Your Class :
             <select value={newMessage.class} onChange={(e) => handleText(e)} id='class'>
-                <option value={""}> Select Your Class</option>
+                <option value={""}> Choose Your Class</option>
                 <option value={"Pre-K"}> Pre-K</option>
                 <option value={"Kindergarten"}> Kindergarten</option>
                 <option value={"First-Grade"}> First-Grade</option>
                 <option value={"Second-Grade"}> Second-Grade</option>
                 <option value={"Third-Grade"}> Third-Grade</option>
             </select>
+
+            </label>
 
 {/* Message */}
 <label htmlFor='posted_message'>

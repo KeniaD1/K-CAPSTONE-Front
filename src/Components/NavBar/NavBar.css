@@ -1,9 +1,21 @@
 .navbar {
-    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* text-align: center; */
     border-bottom: 1px solid #5871cc;
     padding: 10px 0;
     text-decoration: none;
-    background-color: #5871cc;
+
+
+
+}
+
+.logo {
+    width: 500px;
+    height: 100px;
+
 
 }
 
@@ -12,23 +24,29 @@ h1 {
 }
 
 .navbar-wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-decoration: none;
+
+
 }
 
 
 
-.navbar-brand h1 {
-    font-size: 24px;
+.navbar-brand {
+
+    font-size: 50px;
     font-weight: bold;
     text-decoration: none;
     color: coral;
+
+
 }
 
 .navbar-nav .nav-link {
-    font-size: 16px;
+    font-size: 36px;
     color: coral;
     text-decoration: none;
+    /* margin-right: 800px; */
 }
 
 .navbar-nav .nav-link:hover {
@@ -40,7 +58,7 @@ h1 {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: nowrap;
-    background-color: white
+   
 }
 
 .navbar-nav .dropdown-menu .dropdown-item {
@@ -50,13 +68,14 @@ h1 {
     flex: 0 0 auto;
     margin-right: 10px;
     /* Adjust margin as needed */
-    background-color: white
+   
 }
 
 .navbar-nav .dropdown-menu .dropdown-item:hover {
     background-color: #5871cc;
 
 }
+
 
 .navbar-toggler-icon {
     background-color: coral;

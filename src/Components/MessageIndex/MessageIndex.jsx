@@ -40,16 +40,27 @@ const MessageIndex = () => {
                     <Link to={`/messages/${mObj.id}`} className='message'>
 
                         <h2> {mObj.name}</h2>
+                        <span>{mObj.class}</span>
                         
                       
-                        <p>{mObj.post_date}</p>
-                        <p>{mObj.post_time}</p>
+                        <p className='date'>{mObj.post_date}</p>
+                        <p className='time'> {mObj.post_time}</p>
                         <p>{mObj.posted_message}</p>
                    
                         </Link>
 
                 )
             }
+
+<div class="sidebar">
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="https://www.schools.nyc.gov/">NYC Public Schools </a></li>
+            <li><a href="https://www.nysed.gov/">NYS Dept. Education</a></li>
+            <li><a href="https://www.schools.nyc.gov/calendar/2023-2024-school-year-calendar">Calendar</a></li>
+            <li><a href="https://www.schools.nyc.gov/learning/programs">Programs</a></li>
+        </ul>
+    </div>
 
         </div>
         </>

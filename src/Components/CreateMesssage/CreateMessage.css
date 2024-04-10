@@ -2,19 +2,21 @@
     width: 50%;
     margin: auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: white;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 .message-form label {
     display: block;
     margin-bottom: 10px;
+    color:#5871cc ;
 }
 
 .message-form input[type="text"],
 .message-form textarea {
     width: calc(100% - 20px); /* Adjust the width to make it smaller */
+    
 }
 
 
@@ -23,9 +25,10 @@
 .message-form select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 65px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 45px;
+    color: #5871cc;
 }
 
 
