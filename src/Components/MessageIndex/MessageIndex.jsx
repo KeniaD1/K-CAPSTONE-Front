@@ -52,7 +52,7 @@ const MessageIndex = () => {
                 )
             }
 
-<div class="sidebar">
+<div class="sidebar-index">
         <h2>Resources</h2>
         <ul>
             <li><a href="https://www.schools.nyc.gov/">NYC Public Schools </a></li>

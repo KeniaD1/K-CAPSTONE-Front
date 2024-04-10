@@ -7,13 +7,13 @@ const HomeComponent = () => {
         <div  className='home-div'>
         <div className='home-sidebar'>
                 {/* Sidebar content goes here */}
-                <h2>Sidebar</h2>
-                <ul>
-                    <li>Menu Item 1</li>
-                    <li>Menu Item 2</li>
-                    <li>Menu Item 3</li>
-                    {/* Add more menu items as needed */}
-                </ul>
+                <h2>Resources</h2>
+        <ul>
+            <li><a href="https://www.schools.nyc.gov/">NYC Public Schools </a></li>
+            <li><a href="https://www.nysed.gov/">NYS Dept. Education</a></li>
+            <li><a href="https://www.schools.nyc.gov/calendar/2023-2024-school-year-calendar">Calendar</a></li>
+            <li><a href="https://www.schools.nyc.gov/learning/programs">Programs</a></li>
+        </ul>
             </div>
             <div className='home-content'>
                 <header>
@@ -25,7 +25,7 @@ const HomeComponent = () => {
 
                 <p>Parent Connect is more than just a tool – it's a bridge that connects you directly to your child's school community. Whether you're looking to stay informed about important updates, connect with teachers, or actively participate in your child's learning experience, our platform provides the resources and support you need.</p>
 
-                <p>With Parent Connect, you can:</p>
+                <h3>With Parent Connect, you can:</h3>
                 <ul>
                     <li>Stay Informed: Receive real-time updates about your child's academic progress, upcoming events, and school announcements.</li>
                     <li>Engage Collaboratively: Communicate effortlessly with teachers, administrators, and fellow parents to address questions, concerns, and celebrate achievements.</li>

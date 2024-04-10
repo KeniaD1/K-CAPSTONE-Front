@@ -22,14 +22,16 @@
 }
 
 .home-sidebar ul {
-    list-style-type: none;
+    list-style-type: '-';
     padding: 0;
 }
 
 .home-sidebar ul li {
-    padding: 8px 0;
+    padding: 28px 0;
     cursor: pointer;
+    color: black;
 }
+
 
 .home-content {
     flex: 1;
@@ -38,6 +40,16 @@
     padding: 20px;
     border-radius: 8px;
 }
+
 .welcome-message p {
     padding: 20px;
+}
+
+.welcome-message li {
+    padding: 20px;
+}
+
+.home-sidebar ul li a {
+    text-decoration: underline;
+    color: #000;
 }

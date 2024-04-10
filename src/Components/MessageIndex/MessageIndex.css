@@ -96,7 +96,7 @@
     /* Adjust margin as needed */
 
 }
-.sidebar {
+.sidebar-index {
     height: 100%;
     width: 250px;
     position: fixed;
@@ -106,21 +106,21 @@
     padding-top: 20px;
 }
 
- .sidebar h2 {
+ .sidebar-index h2 {
     color:black;
     text-align: center;
 }
 
-.sidebar ul {
+.sidebar-index ul {
     /* list-style-type: none; */
     padding: 0;
 }
 
-.sidebar ul li {
+.sidebar-index ul li {
     padding: 20px;
 }
 
-.sidebar ul li a {
+.sidebar-index ul li a {
     color: black;
     text-decoration: none;
 } 
