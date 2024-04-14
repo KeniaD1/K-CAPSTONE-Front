@@ -11,7 +11,7 @@ const myNavbar = () => {
     return (
         <div className='navbar-wrapper'>
             <Navbar bg="light" expand="lg" className="justify-content-center">
-                <Navbar.Brand href="/"><img className='logo' src='public/Screenshot 2024-04-10 at 2.38.03 AM.png' />  </Navbar.Brand>
+                <Navbar.Brand href="/"><img className='logo' src='/Screenshot 2024-04-10 at 2.38.03 AM.png' />  </Navbar.Brand>
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

@@ -80,7 +80,7 @@ const CreateMessage = () => {
             id ? handleEdit(event)
                 : handleSubmit(event)
         }}>
-        <h2>POST MESSAGE</h2>
+<h2>POST MESSAGE</h2>
 
             {/* name */}
             <label htmlFor='name'>
@@ -107,7 +107,7 @@ const CreateMessage = () => {
 <label htmlFor='posted_message'>
     Enter Message Here :
 
-    <input id="posted_message" type='text' value={newMessage.posted_message} required onChange={(event) => { handleText(event) }}/>
+    <textarea id="posted_message" type='text' value={newMessage.posted_message} required onChange={(event) => { handleText(event) }}/>
 
 </label>
 

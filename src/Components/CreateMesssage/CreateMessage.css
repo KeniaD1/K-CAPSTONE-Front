@@ -15,13 +15,17 @@
 
 .message-form input[type="text"],
 .message-form textarea {
-    width: calc(100% - 20px); /* Adjust the width to make it smaller */
-    
+      width: calc(100% - 20px); /*Adjust the width to make it smaller */
+     
 }
+/* textarea {
+    width: 50px;
+} */
+
 
 
 .message-form input,
-.message-form textarea,
+/* .message-form textarea, */
 .message-form select {
     width: 100%;
     padding: 10px;
@@ -29,6 +33,10 @@
     border: 1px solid #ccc;
     border-radius: 45px;
     color: #5871cc;
+}
+
+.message-form textarea {
+    width: ;
 }
 
 
