@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
 import './NavBar.css'
 import { useState } from 'react';
 const myNavbar = () => {
@@ -17,11 +17,13 @@ const myNavbar = () => {
                     <Nav className="mr-auto">
                         <NavDropdown title='=' id="basic-nav-dropdown" >
                             {/* <NavDropdown.Item href="/">Home</NavDropdown.Item> */}
-                            <NavDropdown.Item href="/messages">Message Board</NavDropdown.Item>
+                            <Button>
+                            <NavDropdown.Item href="/messages">Message Board</NavDropdown.Item></Button>
                             <br></br>
-                            <NavDropdown.Item href="/messages/new">Post Message</NavDropdown.Item>
+                            <Button>
+                            <NavDropdown.Item href="/messages/new">Post Message</NavDropdown.Item>  </Button>
                             <br></br>
-                            <NavDropdown.Item href="/messages/:id/edit">Edit Message</NavDropdown.Item>
+                            <Button><NavDropdown.Item href="/messages/:id/edit">Edit Message</NavDropdown.Item>  </Button>
 
                         </NavDropdown>
 

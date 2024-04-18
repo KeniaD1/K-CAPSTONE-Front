@@ -40,7 +40,7 @@ const MessageShow = () => {
             <div className='messageShow'>
 
                 <h1> {messageInfo.name}</h1>
-                <span>{messageInfo.class}</span>
+                <span> Class : {messageInfo.class}</span>
 
 
                 <p className='date-show'>{messageInfo.post_date}</p>

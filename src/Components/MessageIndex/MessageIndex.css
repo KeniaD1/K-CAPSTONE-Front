@@ -50,7 +50,7 @@
     /* Set the number of columns */
     column-gap: 20px;
     /* Adjust the gap between columns */
-    width: 50%;
+    width: 60%;
 
 
 
@@ -82,8 +82,8 @@
 
 .date {
     position: absolute;
-    top: 10px;
-    right: 100px;
+    top: 1px;
+    right: 150px;
     color: #5c5d62;
     margin-right: 10px;
     font-size: x-small;

@@ -107,7 +107,7 @@ const CreateMessage = () => {
 <label htmlFor='posted_message'>
     Enter Message Here :
 
-    <textarea id="posted_message" type='text' value={newMessage.posted_message} required onChange={(event) => { handleText(event) }}/>
+    <textarea id="posted_message" type='text'  rows = '10'value={newMessage.posted_message} required onChange={(event) => { handleText(event) }}/>
 
 </label>
 
