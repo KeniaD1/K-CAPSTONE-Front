@@ -1,16 +1,15 @@
-
 h1 {
     display: flex;
-    justify-content:  center;
+    justify-content: center;
 }
 
 .home-div {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: flex-start; */
     padding: 20px;
     background-color: coral;
-  
+
 }
 
 /* .home-sidebar {
@@ -47,6 +46,7 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 8px;
+    margin-bottom: 100px;
 }
 
 .welcome-message p {
@@ -66,51 +66,66 @@ h1 {
     display: flex;
     list-style: none;
     padding: 0;
-  }
+    /* align-items: center; */
+}
 
 .card {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
     margin-right: 10px;
-    width: 300px; /* Adjust width as needed */
+    width: 300px;
+    /* Adjust width as needed */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .footer {
+    /* text-align: center; */
+}
+
+.footer {
     /* position: fixed;
     bottom: 0;
     left: 0; */
     width: 100%;
-    background-color: #f9f9f9; /* Set the background color as needed */
-    padding: 20px; /* Adjust padding as needed */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow if desired */
+    background-color: #f9f9f9;
+    height: fit-content;
+    /* Set the background color as needed */
+    padding: 5px;
+    /* Adjust padding as needed */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    /* Add shadow if desired */
     text-align: center;
-  }
-  .footer h2 {
-    margin-bottom: 10px;
-  }
-  
+}
+
+.footer h2 {
+    margin: 0;
+}
+
 .footer-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-  }
-  .cards {
+    justify-content: space-evenly;
+}
+
+.cards {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
     margin: 10px;
-    width: 300px; /* Adjust width as needed */
+    width: 200px;
+    /* Adjust width as needed */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-decoration: none;
-  }
+    list-style: none;
+}
 
-  .cards a {
+.cards a {
     text-decoration: none;
     color: #333;
-  }
-  
-  .cards a:hover {
-    color: #007bff; /* Change to desired hover color */
-  }
+}
+
+
+
+.cards a:hover {
+    color: #007bff;
+    /* Change to desired hover color */
+}

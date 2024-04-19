@@ -45,7 +45,7 @@ const MessageShow = () => {
 
                 <p className='date-show'>{messageInfo.post_date}</p>
                 <p className='time-show'>Sent : {messageInfo.post_time}</p>
-                <p>{messageInfo.posted_message}</p>
+                <p className='messages'>{messageInfo.posted_message}</p>
 
             </div>
 
@@ -54,7 +54,7 @@ const MessageShow = () => {
                     EDIT
                 </Link>
                 <button onClick={confirmDelete} className='button delete-button'>
-                    🗑️
+                    🆇
                 </button >
             </aside>
         </div>

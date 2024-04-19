@@ -17,13 +17,13 @@ const myNavbar = () => {
                     <Nav className="mr-auto">
                         <NavDropdown title='=' id="basic-nav-dropdown" >
                             {/* <NavDropdown.Item href="/">Home</NavDropdown.Item> */}
-                            <Button>
+                            <Button className='nav-button'>
                             <NavDropdown.Item href="/messages">Message Board</NavDropdown.Item></Button>
                             <br></br>
-                            <Button>
+                            <Button className='nav-button'>
                             <NavDropdown.Item href="/messages/new">Post Message</NavDropdown.Item>  </Button>
                             <br></br>
-                            <Button><NavDropdown.Item href="/messages/:id/edit">Edit Message</NavDropdown.Item>  </Button>
+                            {/* <Button className='nav-button'><NavDropdown.Item href="/messages/:id/edit">Edit Message</NavDropdown.Item>  </Button> */}
 
                         </NavDropdown>
 
