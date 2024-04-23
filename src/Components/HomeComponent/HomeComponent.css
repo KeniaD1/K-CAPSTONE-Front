@@ -66,7 +66,7 @@ h1 {
     display: flex;
     list-style: none;
     padding: 0;
-    /* align-items: center; */
+    align-items: center;
 }
 
 .card {
@@ -74,10 +74,13 @@ h1 {
     border-radius: 8px;
     padding: 20px;
     margin-right: 10px;
+    /* margin:  15px; */
     width: 300px;
     /* Adjust width as needed */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* text-align: center; */
+    flex-grow: 1; 
+  
 }
 
 .footer {
@@ -106,7 +109,7 @@ h1 {
 }
 
 .cards {
-    border: 1px solid #ccc;
+    border: 1px solid coral;
     border-radius: 8px;
     padding: 10px;
     margin: 10px;
@@ -128,4 +131,12 @@ h1 {
 .cards a:hover {
     color: #007bff;
     /* Change to desired hover color */
+}
+
+#p-tags{
+    border-radius: 8px;
+}
+
+.info{
+    text-align: center;
 }

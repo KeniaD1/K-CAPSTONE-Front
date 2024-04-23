@@ -10,14 +10,16 @@
 .message-form label {
     display: block;
     margin-bottom: 10px;
-    color:#5871cc ;
+    color: black;
 }
 
 .message-form input[type="text"],
 .message-form textarea {
-      width: calc(100% - 20px); /*Adjust the width to make it smaller */
-     
+    width: calc(100% - 20px);
+    /*Adjust the width to make it smaller */
+
 }
+
 /* textarea {
     width: 50px;
 } */
@@ -31,22 +33,29 @@
     padding: 10px;
     margin-bottom: 65px;
     border: 1px solid #ccc;
-    border-radius: 45px;
+    /* border-radius: 45px; */
     color: #5871cc;
 }
 
 .message-form textarea {
-    /* width: ; */
+    width: 100%
 }
 
 
 .message-form input[type="submit"] {
-    background-color: #007bff;
+    background-color: coral;
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
 }
 
 .message-form input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.form-name {
+    text-align: center;
+    font-style: ;
 }

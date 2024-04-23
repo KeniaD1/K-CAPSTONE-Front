@@ -80,7 +80,7 @@ const CreateMessage = () => {
             id ? handleEdit(event)
                 : handleSubmit(event)
         }}>
-<h2>POST MESSAGE</h2>
+<h2 className='form-name'>{id ? "EDIT MESSAGE" :"POST MESSAGE"}</h2>
 
             {/* name */}
             <label htmlFor='name'>

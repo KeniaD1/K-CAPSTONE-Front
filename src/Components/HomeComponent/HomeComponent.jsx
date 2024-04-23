@@ -21,12 +21,12 @@ const HomeComponent = () => {
             </header>
 
             <div className="welcome-message">
-                <div id='p-tags' style={{display: "flex", border: "1p solid coral"}}>
+                <div id='p-tags' style={{display: "flex", border: "1px solid coral"}}>
                 <p>At Parent Connect, we believe in the power of strong partnerships between parents and schools to support every child's educational journey. We're thrilled to welcome you to our online platform designed to enhance communication, engagement, and involvement in your child's education.</p>
 
                 <p>Parent Connect is more than just a tool – it's a bridge that connects you directly to your child's school community. Whether you're looking to stay informed about important updates, connect with teachers, or actively participate in your child's learning experience, our platform provides the resources and support you need.</p>
                 </div>
-                <h3>With Parent Connect, you can:</h3>
+                <h3 className='info'>With Parent Connect, you can:</h3>
                 <ul className='card-list'>
                     <li className='card'>Stay Informed: Receive real-time updates about your child's academic progress, upcoming events, and school announcements.</li>
                     <li className='card'>Engage Collaboratively: Communicate effortlessly with teachers, administrators, and fellow parents to address questions, concerns, and celebrate achievements.</li>
