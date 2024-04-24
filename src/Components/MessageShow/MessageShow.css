@@ -3,30 +3,32 @@
     justify-content: center;
     align-items: center;
     /* height: 100%; 
-    /* position: relative; */ */
+
     /* flex-direction: column; */
     margin-top: 50px;
     padding: 20px;
+
 
 }
 
 
 .messageShow {
     background-color: #f9f9f9;
-    border: 1px solid#5871cc;
+    border: 1px solid coral;
     border-radius: 8px;
     padding: 100px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 305px; 
+    width: 305px;
     /* height: 250px;
     max-width: 800px;  */
     margin-right: 10px;
     /* Add some spacing between the message display and buttons */
+    position: relative;
 }
 
 .messageShow h1 {
-    top: 15;
+    /* top: 15; */
     font-size: 34px;
     /* margin-bottom: 15px; */
     /* padding: 5px; */
@@ -35,19 +37,24 @@
 
 }
 
+.class-dets{
+    color: #5871cc;
+}
+
 .messageShow span {
     font-size: 22px;
     /* margin-bottom: 15px; */
-
+/* color: black; */
 }
 
 .date-show,
 .time-show {
     position: absolute;
     /* Position date and time absolutely */
-    top: 170px;
+    top: 0px;
+    /* margin-bottom: 4px; */
     /* Adjust top position */
-    left: 180px;
+    left: 0px;
     /* Adjust left position */
     font-size: 14px;
     /* Adjust font size */
@@ -57,16 +64,16 @@
 
 .date-show {
     padding: 15px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 /* .time-show {
  top :20px;
 }  */
 .messageShow p {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     /* color: #5871cc; */
-    margin: 55px 0;
+    /* margin: 55px 0; */
 
 
 }
@@ -90,16 +97,16 @@
 }
 
 .edit-button {
-    background-color:coral;
+    background-color: coral;
     color: #fff;
     padding: 10px 20px;
     /* height: 40px; */
-     
+
     /* margin-right: 10px; */
 }
 
 .delete-button {
-    background-color:#5871cc;
+    background-color: #5871cc;
     color: #fff;
     width: 80px;
     height: 38px;
@@ -108,7 +115,11 @@
 
 .messages {
     font-size: 30px;
+ margin-top: 50px;
+ 
 }
+
+
 
 /* .messageShow-button a {
     text-decoration: none;

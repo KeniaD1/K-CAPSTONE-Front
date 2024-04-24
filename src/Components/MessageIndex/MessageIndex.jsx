@@ -23,12 +23,20 @@ const sampleNews = [
         link: "https://www.nbcchicago.com/news/local/indiana-school-becomes-first-in-state-to-move-to-4-day-school-week/3417278/",
         photo_url: "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/436368178_965361725375099_1290302764439065631_n.jpg?stp=dst-jpg_p960x960&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=GNp4faA62lYAb7TKQsu&_nc_ht=scontent-lga3-2.xx&edm=AGnjaloEAAAA&oh=00_AfCzxJCKcve9c-dLAgpKBxaFUrzFRbsBKLDFN9YNNAQIJw&oe=662D8E52",
         published_datetime_utc: "2024-04-23T02:09:25.000Z"
+    },
+    {
+        title: "Eric Adams retains control over NYC schools, after push from Hochul",
+        link: "https://www.chalkbeat.org/newyork/2024/04/20/ny-lawmakers-governor-hochul-extend-mayoral-control-in-budget-deal/",
+        photo_url: "https://www.chalkbeat.org/resizer/v2/UTBMYF4DABGORABR2WHNUJDCVY.jpg?smart=true&auth=915426dc23d072124fc32faab18cc15eafc8849c5bdaadf31dec16ceb736d32d&width=1600&height=1066",
+        published_datetime_utc: "2024-04-20T19:38:00.000Z"
     }
 ];
 
 const MessageIndex = () => {
 
     const [allMessages, setAllMessages] = useState([])
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchedMessages, setSearchedMessages] = useState([]);
     // const [resources, setResources] = useState([]);
 
 
@@ -70,17 +78,56 @@ const MessageIndex = () => {
     //         console.error(error);
     //     }
     // }
+
+    // Function to handle search input change
+    const handleSearchChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+    // Function to handle search form submission
+    const handleSearchSubmit = (event) => {
+        event.preventDefault(); // Prevent default form submission behavior
+        // Filter messages based on search term
+        const filteredMessages = allMessages.filter(message =>
+            message.name.toLowerCase().includes(searchTerm.toLowerCase()) || // Filter by message name
+            message.posted_message.toLowerCase().includes(searchTerm.toLowerCase()) // Filter by message content
+        );
+        setSearchedMessages(filteredMessages); // Set the filtered messages to display
+    };
+
     useEffect(() => {
         getAllMessages(); // Fetch messages on component mount
         // fetchData(); // Fetch parenting tips on component mount
     }, []);
 
+    // Filter messages based on search term
+    const filteredMessages = allMessages.filter(message => {
+        // If search term is empty, render all messages
+        if (!searchTerm) {
+            return true;
+        }
+        // Otherwise, filter by search term
+        return (
+            message.name.toLowerCase().includes(searchTerm.toLowerCase()) || // Filter by message name
+            message.posted_message.toLowerCase().includes(searchTerm.toLowerCase()) // Filter by message content
+        );
+    });
     return (
         <>
-
+            <div className='search-bar'>
+            <form onSubmit={handleSearchSubmit}>
+                <input
+            
+                    type='text'
+                    placeholder='Search messages...'
+                    value={searchTerm}
+                    onChange={handleSearchChange}
+                />
+                <button className="search-btn"type="submit">Search</button>
+                </form>
+            </div>
             <div className='message-index'>
                 {
-                    allMessages.map(mObj =>
+                   ( searchTerm === '' ? allMessages : searchedMessages).map(mObj =>
                         <Link to={`/messages/${mObj.id}`} className='message'>
 
                             <h2> {mObj.name}</h2>
@@ -96,16 +143,16 @@ const MessageIndex = () => {
                     )
                 }
                 <div className="sidebar-index">
-                    <h2>Parenting Tips</h2>
+                    <h2>Recent News</h2>
                     <ul>
 
                         {resources.map((tip, index) => (
                             <li key={index}>
                                 {tip.title}
-                        <img className="side-photo"src={tip.photo_url}/>
-                        <a className="click"href={tip.link} target="_blank">Click More </a>
+                                <img className="side-photo" src={tip.photo_url} />
+                                <a className="click" href={tip.link} target="_blank">Click More </a>
                             </li>
-                          
+
                         ))}
                     </ul>
                 </div>

@@ -41,10 +41,10 @@ const HomeComponent = () => {
                 <footer className='footer'>
                 <h2>Resources</h2>
         <ul className='footer-cards'>
-            <li className='cards'> <a href="https://www.schools.nyc.gov/">NYC Public Schools </a></li>
-            <li className='cards'> <a href="https://www.nysed.gov/">NYS Dept. Education</a></li>
-            <li className='cards'> <a href="https://www.schools.nyc.gov/calendar/2023-2024-school-year-calendar">Calendar</a></li>
-            <li className='cards'> <a href="https://www.schools.nyc.gov/learning/programs">Programs</a></li>
+            <li className='cards'> <a href="https://www.schools.nyc.gov/" target="_blank">NYC Public Schools </a></li>
+            <li className='cards'> <a href="https://www.nysed.gov/"target="_blank">NYS Dept. Education</a></li>
+            <li className='cards'> <a href="https://www.schools.nyc.gov/calendar/2023-2024-school-year-calendar"target="_blank">Calendar</a></li>
+            <li className='cards'> <a href="https://www.schools.nyc.gov/learning/programs"target="_blank">Programs</a></li>
         </ul>
             </footer>
         </div>
