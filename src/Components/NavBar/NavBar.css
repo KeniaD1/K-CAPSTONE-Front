@@ -37,14 +37,14 @@ h1 {
     font-size: 50px;
     font-weight: bold;
     text-decoration: none;
-    color: coral;
+    color:coral
 
 
 }
 
 .navbar-nav .nav-link {
     font-size: 36px;
-    color: coral;
+    /* color:white; */
     text-decoration: none;
     /* margin-right: 800px; */
 }
@@ -63,7 +63,7 @@ h1 {
 
 .navbar-nav .dropdown-menu .dropdown-item {
     font-size: 16px;
-    color: coral;
+    color: white;
     /* display: inline-block; or inline-flex */
     flex: 0 0 auto;
     margin-right: 10px;
@@ -87,6 +87,6 @@ a {
 
 .nav-button {
     margin: 15px;
-    background-color: gray;
+    background-color: coral;
     border-radius: 4px;
 }

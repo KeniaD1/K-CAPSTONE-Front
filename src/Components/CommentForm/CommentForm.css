@@ -1,0 +1,21 @@
+.comment-form form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    padding: 2vh 0;
+    width: 70%;
+}
+
+.comment-form input[type='submit'] {
+    background-color:  #5871cc;
+    color: white;
+    border-radius: 4px;
+    padding: 8px;
+
+}
+.comment-form button {
+    background-color: coral;
+    color: white;
+    border-radius: 4px;
+    padding: 8px;
+}

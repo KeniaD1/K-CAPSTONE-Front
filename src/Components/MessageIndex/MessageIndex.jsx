@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios"
 import './MessageIndex.css'
-
+import CommentForm from '../CommentForm/CommentForm';
 
 
 
@@ -37,7 +37,9 @@ const MessageIndex = () => {
     const [allMessages, setAllMessages] = useState([])
     const [searchTerm, setSearchTerm] = useState('');
     const [searchedMessages, setSearchedMessages] = useState([]);
+
     // const [resources, setResources] = useState([]);
+    // const [addComments, setAddComments] = useState(false)
 
 
     function getAllMessages() {
@@ -96,16 +98,17 @@ const MessageIndex = () => {
 
     useEffect(() => {
         getAllMessages(); // Fetch messages on component mount
-        // fetchData(); // Fetch parenting tips on component mount
+
     }, []);
 
+   
     // Filter messages based on search term
     const filteredMessages = allMessages.filter(message => {
         // If search term is empty, render all messages
         if (!searchTerm) {
             return true;
         }
-        // Otherwise, filter by search term
+
         return (
             message.name.toLowerCase().includes(searchTerm.toLowerCase()) || // Filter by message name
             message.posted_message.toLowerCase().includes(searchTerm.toLowerCase()) // Filter by message content
@@ -114,34 +117,70 @@ const MessageIndex = () => {
     return (
         <>
             <div className='search-bar'>
-            <form onSubmit={handleSearchSubmit}>
-                <input
-            
-                    type='text'
-                    placeholder='Search messages...'
-                    value={searchTerm}
-                    onChange={handleSearchChange}
-                />
-                <button className="search-btn"type="submit">Search</button>
+                <form onSubmit={handleSearchSubmit}>
+                    <input
+
+                        type='text'
+                        placeholder='Search messages...'
+                        value={searchTerm}
+                        onChange={handleSearchChange}
+                    />
+                    <button className="search-btn" type="submit">Search</button>
                 </form>
             </div>
             <div className='message-index'>
                 {
-                   ( searchTerm === '' ? allMessages : searchedMessages).map(mObj =>
-                        <Link to={`/messages/${mObj.id}`} className='message'>
+                    (searchTerm === '' ? allMessages : searchedMessages).map(mObj =>
+                        <div className='message'>
+                            <Link to={`/messages/${mObj.id}`} >
 
-                            <h2> {mObj.name}</h2>
-                            <span> Class : {mObj.class} </span>
+                                <h2> {mObj.name}</h2>
+                            </Link>
+                            <span className='message-class'> <b>Class </b>: {mObj.class} </span>
 
-
-                            <p className='date'>{mObj.post_date}</p>
-                            <p className='time'> {mObj.post_time}</p>
+                            <div className='message-datetime'>
+                                <span className='date'>{mObj.post_date}</span>
+                                <span className='time'> {mObj.post_time}</span>
+                            </div>
                             <p>{mObj.posted_message}</p>
 
-                        </Link>
 
+                            <div className='comments'>
+                                <h3>Comments:</h3>
+                                <ul>
+                                    {mObj.comments.map(comment => (
+                                        <li key={comment.id}>
+                                            <strong>{comment.user_name}</strong>: {comment.comment_text}
+                                        </li>
+                                    ))}
+                                </ul>
+
+                            </div>
+                            <CommentForm  messageId={mObj.id} getAllMessages={getAllMessages}/>
+                            {/* <button onClick={() => setAddComments(!addComments)}>Add Comment:</button>
+                            {addComments &&
+                                <div className='comment-form'>
+
+                                    <form onSubmit={(event) => {
+                                        event.preventDefault();
+                                        const formData = new FormData(event.target);
+                                        const commentData = {
+                                            user_name: formData.get('user_name'),
+                                            comment_text: formData.get('comment_text')
+                                        };
+                                        handleSubmitComment(event, mObj.id, commentData);
+                                    }}>
+                                        <input type='text' name='user_name' placeholder='Your Name' required />
+                                        <textarea name='comment_text' placeholder='Your Comment' required />
+                                        <button type='submit'>Post Comment</button>
+                                    </form>
+                                </div>
+                            } */}
+                        </div>
                     )
                 }
+
+
                 <div className="sidebar-index">
                     <h2>Recent News</h2>
                     <ul>
