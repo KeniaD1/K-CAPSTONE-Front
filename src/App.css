@@ -1,0 +1,22 @@
+/* Media query for screens smaller than 768px (typical tablets and phones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    /* Additional mobile-specific styles */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Media query for screens smaller than 480px (typical smartphones) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    /* Additional styles for smaller screens */
+    .container {
+        padding: 5px;
+    }
+}

@@ -115,13 +115,13 @@ const MessageIndex = () => {
         );
     });
     return (
-        <>
+        < div className='messageIndex-page'>
             <div className='search-bar'>
                 <form onSubmit={handleSearchSubmit}>
                     <input
 
                         type='text'
-                        placeholder='Search messages...'
+                        placeholder='Search name...'
                         value={searchTerm}
                         onChange={handleSearchChange}
                     />
@@ -132,7 +132,7 @@ const MessageIndex = () => {
                 {
                     (searchTerm === '' ? allMessages : searchedMessages).map(mObj =>
                         <div className='message'>
-                            <Link to={`/messages/${mObj.id}`} >
+                            <Link to={`/messages/${mObj.id}`} className='linker' >
 
                                 <h2> {mObj.name}</h2>
                             </Link>
@@ -157,47 +157,32 @@ const MessageIndex = () => {
 
                             </div>
                             <CommentForm  messageId={mObj.id} getAllMessages={getAllMessages}/>
-                            {/* <button onClick={() => setAddComments(!addComments)}>Add Comment:</button>
-                            {addComments &&
-                                <div className='comment-form'>
-
-                                    <form onSubmit={(event) => {
-                                        event.preventDefault();
-                                        const formData = new FormData(event.target);
-                                        const commentData = {
-                                            user_name: formData.get('user_name'),
-                                            comment_text: formData.get('comment_text')
-                                        };
-                                        handleSubmitComment(event, mObj.id, commentData);
-                                    }}>
-                                        <input type='text' name='user_name' placeholder='Your Name' required />
-                                        <textarea name='comment_text' placeholder='Your Comment' required />
-                                        <button type='submit'>Post Comment</button>
-                                    </form>
-                                </div>
-                            } */}
+                            
                         </div>
                     )
                 }
 
 
-                <div className="sidebar-index">
+               
+            </div>
+            <div className="sidebar-index">
                     <h2>Recent News</h2>
                     <ul>
 
                         {resources.map((tip, index) => (
-                            <li key={index}>
-                                {tip.title}
+                            <li key={index} >
+                               <b>{tip.title}</b> 
                                 <img className="side-photo" src={tip.photo_url} />
-                                <a className="click" href={tip.link} target="_blank">Click More </a>
+                                <button className='side-btn'>
+                                <a className="click" href={tip.link} target="_blank">Read More </a>
+                                </button>
                             </li>
 
                         ))}
                     </ul>
                 </div>
 
-            </div>
-        </>
+        </div>
     );
 };
 

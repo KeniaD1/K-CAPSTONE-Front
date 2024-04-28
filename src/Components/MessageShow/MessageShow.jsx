@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaRegEdit } from "react-icons/fa";
+import { AiOutlineDelete } from "react-icons/ai";
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -40,21 +42,30 @@ const MessageShow = () => {
             <div className='messageShow'>
 
                 <h1> {messageInfo.name}</h1>
-              <span className='class'>  Class :  <span className='class-dets'>{messageInfo.class}</span> </span>
+                <span className='class'>  Class :  <span className='class-dets'>{messageInfo.class}</span> </span>
 
-
-                <p className='date-show'>{messageInfo.post_date}</p>
-                <p className='time-show'>Sent : {messageInfo.post_time}</p>
+                <p className="messageShow-datetime">
+                    <span className='date-show'>{messageInfo.post_date}</span>
+                    <span className='time-show'>Sent : {messageInfo.post_time}</span>
+                </p>
                 <p className='messages'>{messageInfo.posted_message}</p>
+                <div className='comments-show'>
+                    {/* <h3>Comments</h3> */}
+
+                    {/* <li>{messageInfo.comments.comment_text}</li> */}
+                </div>
 
             </div>
 
+
             <aside className='messageShow-button'>
-                <Link to={`/messages/${id}/edit`} className='button edit-button'>
-                    EDIT
-                </Link>
-                <button onClick={confirmDelete} className='button delete-button'>
-                    🆇
+                <button onClick={() => navigate(`/messages/${id}/edit`)} className=' edit-button'>
+                    EDIT <FaRegEdit />
+                    
+                </button>
+                <button onClick={confirmDelete} className='delete-button'>
+                    DELETE <AiOutlineDelete />
+                    
                 </button >
             </aside>
         </div>
